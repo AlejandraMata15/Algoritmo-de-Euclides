@@ -1,2 +1,2 @@
 # Algoritmo-de-Euclides
-Practica 2 de Cricri
+Esta es la practica 2 de criptografía, impartida por Nidia 2023
