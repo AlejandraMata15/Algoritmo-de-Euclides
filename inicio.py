@@ -5,13 +5,17 @@ from tkinter import filedialog
 from cryptography.fernet import Fernet
 
 #Funcion que se ejecutara al presionar el boton "Siguiente"
-def funcion_aee():
-    n=n.get()
-    alpha=alpha.get()
-    beta=beta.get()
-    print(n)
-    print(alpha)
-    print(beta)
+def funcion_siguiente(): 
+    valor_n=n.get()
+    valor_alpha=alpha.get()
+    valor_beta=beta.get()
+    print(valor_n)
+    print(valor_alpha)
+    print(valor_beta)
+    funcion_beta(valor_n, valor_n, valor_alpha)
+    
+def funcion_aee(n,alpha,beta):
+    print("Hola")
     
 # Crear la ventana
 ventana = tk.Tk()
