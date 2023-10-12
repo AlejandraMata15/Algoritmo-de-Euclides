@@ -5,9 +5,10 @@ from tkinter import filedialog
 from cryptography.fernet import Fernet
 
 #Funcion que se ejecutara al presionar el boton "Siguiente"
-def funcion_generar():
-    print("Hola, cara de bola")
-
+def funcion_aee(n, alpha, beta):
+    print(n)
+    print(alpha)
+    print(beta)
     
 # Crear la ventana
 ventana = tk.Tk()
@@ -50,7 +51,7 @@ ruta_label = tk.Label(ventana, text="Ruta de archivo: ")
 ruta_label.pack()
 
 #Boton "Siguiente"
-boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_generar)
+boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_aee)
 boton_generarFunciones.pack()
 
 # Ejecutar la interfaz
