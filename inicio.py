@@ -4,19 +4,9 @@ from tkinter import Entry, StringVar
 from tkinter import filedialog
 from cryptography.fernet import Fernet
 
-#Funcion para manejar la seleccion de radio buttons
-def seleccion_radio():
-    global opcion_seleccionada
-    opcion_seleccionada = var.get()
-
 #Funcion que se ejecutara al presionar el boton "Siguiente"
-def funcion_siguiente():
-    if opcion_seleccionada == "Cifrar":
-        cifrar(archivo_seleccionado)
-
-    elif opcion_seleccionada == "Descifrar":
-        descifrar(archivo_seleccionado)
-
+def funcion_generar():
+    print("Hola, cara de bola")
 
     
 # Crear la ventana
@@ -26,16 +16,15 @@ ventana.geometry("500x300")
 #ventana.configure(bg="gray")  # Establecer el color de fondo en gris
 
 #Variables
-opcion_seleccionada = None
-salto = StringVar()
-archivo_seleccionado = None
-nuevo_archivo = None
+n = StringVar()
+alpha = StringVar()
+beta = StringVar()
 
 #Label para n
 label_n = tk.Label(ventana, text="n: ")
 label_n.pack()
 
-#Entry para ingresar el valor de salto
+#Entry para ingresar el valor de n
 entry_n = Entry(ventana, textvariable=n)
 entry_n.pack()
 
@@ -43,15 +32,15 @@ entry_n.pack()
 label_alpha = tk.Label(ventana, text="Alpha: ")
 label_alpha.pack()
 
-#Entry para ingresar el valor de salto
+#Entry para ingresar el valor de alpha
 entry_alpha = Entry(ventana, textvariable=alpha)
 entry_alpha.pack()
 
 #Label para beta
 label_beta = tk.Label(ventana, text="beta: ")
-label_salto.pack()
+label_beta.pack()
 
-#Entry para ingresar el valor de salto
+#Entry para ingresar el valor de beta
 entry_beta = Entry(ventana, textvariable=beta)
 entry_beta.pack()
 
@@ -61,8 +50,8 @@ ruta_label = tk.Label(ventana, text="Ruta de archivo: ")
 ruta_label.pack()
 
 #Boton "Siguiente"
-boton_siguiente = tk.Button(ventana, text="Siguiente", command=funcion_siguiente)
-boton_siguiente.pack()
+boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_generar)
+boton_generarFunciones.pack()
 
 # Ejecutar la interfaz
 ventana.mainloop()
