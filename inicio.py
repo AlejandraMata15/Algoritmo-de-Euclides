@@ -31,6 +31,29 @@ salto = StringVar()
 archivo_seleccionado = None
 nuevo_archivo = None
 
+#Label para n
+label_n = tk.Label(ventana, text="n: ")
+label_n.pack()
+
+#Entry para ingresar el valor de salto
+entry_n = Entry(ventana, textvariable=n)
+entry_n.pack()
+
+#Label para alpha
+label_alpha = tk.Label(ventana, text="Alpha: ")
+label_alpha.pack()
+
+#Entry para ingresar el valor de salto
+entry_alpha = Entry(ventana, textvariable=alpha)
+entry_alpha.pack()
+
+#Label para beta
+label_beta = tk.Label(ventana, text="beta: ")
+label_salto.pack()
+
+#Entry para ingresar el valor de salto
+entry_beta = Entry(ventana, textvariable=beta)
+entry_beta.pack()
 
 
 # Label para mostrar la ruta del archivo seleccionado
