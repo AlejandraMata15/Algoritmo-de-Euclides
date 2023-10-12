@@ -13,7 +13,7 @@ def funcion_siguiente():
     print(valor_n)
     print(valor_alpha)
     print(valor_beta)
-    f.inicio(valor_n, valor_alpha, valor_beta)
+    f.inicio(int(valor_n), int(valor_alpha), int(valor_beta))
     
     
 # Crear la ventana
