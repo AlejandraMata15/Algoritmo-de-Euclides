@@ -31,19 +31,7 @@ salto = StringVar()
 archivo_seleccionado = None
 nuevo_archivo = None
 
-#Radio Buttons
-var = tk.StringVar()
-var.set(None) #Iniciar sin valor seleccionado
-radio_cifrar = tk.Radiobutton(ventana, text="Cifrar", variable=var,value="Cifrar", command=seleccion_radio)
-radio_descifrar = tk.Radiobutton(ventana, text="Descifrar", variable=var, value="Descifrar", command=seleccion_radio)
 
-radio_cifrar.pack()
-radio_descifrar.pack()
-
-
-# Botón "Seleccionar archivo"
-boton_seleccionar = tk.Button(ventana, text="Seleccionar archivo", command=seleccionar_archivo)
-boton_seleccionar.pack()
 
 # Label para mostrar la ruta del archivo seleccionado
 ruta_label = tk.Label(ventana, text="Ruta de archivo: ")
