@@ -51,10 +51,13 @@ label_beta.pack()
 entry_beta = Entry(ventana, textvariable=beta)
 entry_beta.pack()
 
+# Label para mostrar la funcion de cifrado
+cifrado_label = tk.Label(ventana, text="Funcion de cifrado: ")
+cifrado_label.pack()
 
-# Label para mostrar la ruta del archivo seleccionado
-ruta_label = tk.Label(ventana, text="Ruta de archivo: ")
-ruta_label.pack()
+# Label para mostrar la funcion de descifrado
+descifrado_label = tk.Label(ventana, text="Funcion de descifrado: ")
+descifrado_label.pack()
 
 #Boton "Siguiente"
 boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_siguiente)
