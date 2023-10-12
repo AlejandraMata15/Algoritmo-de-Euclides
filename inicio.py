@@ -17,60 +17,7 @@ def funcion_siguiente():
     elif opcion_seleccionada == "Descifrar":
         descifrar(archivo_seleccionado)
 
-#Funcion de cifrado
-def cifrar(archivo):
-    print("Cifrando...")
-    archivo = renombrar_archivo(archivo)
-    #Genera un codigo bien grande(llave)
-    clave=Fernet.generate_key()
-    archClave= open('llave.key', 'rb')
-    archClave.write(clave)
-    f=Fernet(clave)
-    arch=open(archivo,'rb')
-    encript=f.encrypt(arch.read())
-    archivo = agregar_extension_c(archivo)
-    print(archivo)
-    salida= open(archivo,'wb')
-    print(archivo)
-    salida.write(encript)
 
-def agregar_extension_c(archivo):
-    archivo = archivo[:archivo.index('.')]+'_c.txt'
-    return archivo
-
-def agregar_extension_d(archivo):
-    archivo = archivo[:archivo.index('.')]+'_d.txt'
-    return archivo
-
-def descifrar(archivo):
-    print("Descifrando")
-    archivo = renombrar_archivo(archivo)
-    archClave=open('llave.key', 'rb')
-    f=Fernet(archClave.read())
-    arch=open(archivo,'rb')
-    dec=f.decrypt(arch.read())
-    archivo = agregar_extension_d(archivo)
-    print(archivo)
-    salida=open(archivo,'wb')
-    salida.write(dec)
-
-def nombre(archivo):
-    cadena_original = os.path.basename(archivo)
-    return cadena_original
-
-# Función para manejar la selección de archivo
-def seleccionar_archivo():
-    global archivo_seleccionado
-    archivo_seleccionado = filedialog.askopenfilename()
-    ruta_label.config(text="Ruta de archivo: " + archivo_seleccionado)
-   
-def renombrar_archivo(archivo):
-        ruta = archivo[::-1]
-        ruta[:ruta.index('/')]
-        ruta = ruta[:ruta.index('/')]
-        print(ruta[::-1])
-        ruta= ruta[::-1]
-        return ruta
     
 # Crear la ventana
 ventana = tk.Tk()
