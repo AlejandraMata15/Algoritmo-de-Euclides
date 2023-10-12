@@ -12,9 +12,9 @@ def funcion_siguiente():
     print(valor_n)
     print(valor_alpha)
     print(valor_beta)
-    funcion_beta(valor_n, valor_n, valor_alpha)
+    aee(valor_n, valor_n, valor_alpha)
     
-def funcion_aee(n,alpha,beta):
+def aee(n,alpha,beta):
     print("Hola")
     
 # Crear la ventana
@@ -58,7 +58,7 @@ ruta_label = tk.Label(ventana, text="Ruta de archivo: ")
 ruta_label.pack()
 
 #Boton "Siguiente"
-boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_aee)
+boton_generarFunciones = tk.Button(ventana, text="Generar Funciones", command=funcion_siguiente)
 boton_generarFunciones.pack()
 
 # Ejecutar la interfaz
