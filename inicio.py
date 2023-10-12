@@ -5,7 +5,10 @@ from tkinter import filedialog
 from cryptography.fernet import Fernet
 
 #Funcion que se ejecutara al presionar el boton "Siguiente"
-def funcion_aee(n, alpha, beta):
+def funcion_aee():
+    n=n.get()
+    alpha=alpha.get()
+    beta=beta.get()
     print(n)
     print(alpha)
     print(beta)
