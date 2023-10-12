@@ -14,8 +14,11 @@ def funcion_siguiente():
     print(valor_alpha)
     print(valor_beta)
     cifrado,descifrado=f.inicio(int(valor_n), int(valor_alpha), int(valor_beta))
-    cifrado_label.config(cifrado)
-    descifrado_label.config(descifrado)
+    print("prueba")
+    print(cifrado)
+    print(descifrado)
+    cifrado_label.config(text=cifrado)
+    descifrado_label.config(text=descifrado)
     
 # Crear la ventana
 ventana = tk.Tk()
