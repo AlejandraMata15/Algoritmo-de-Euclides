@@ -1,3 +1,5 @@
+import os
+os.system('clear')
 
 def euclides_extendido(a, b):
     if b == 0:
@@ -8,10 +10,20 @@ def euclides_extendido(a, b):
         y = x1 - (a // b) * y1
         return (d, x, y)
 
-# Ejemplo de uso
-a = 117
-b = 244
-mcd, x, y = euclides_extendido(a, b)
-print(f"MCD({a}, {b}) = {mcd}")
-print(f"Coeficientes de Bezout: x = {x}, y = {y}")
+#Variables de entrada
+print('Ingresa n : ',end='')
+n=int(input())
+
+print('Ingresa alfa : ',end='')
+alfa=int(input())
+
+print('Ingresa beta : ',end='')
+beta=int(input())
+
+mcd,x,y=euclides_extendido(alfa,n)
+
+print('\nFunción de cifrado\n'+str(mcd)+' = '+str(alfa)+' + '+str(beta)+' mod('+str(n)+')')
+
+print('\nFunción de decifrado\n'+'p = alfainversa [ '+str(mcd)+' + '+str(n-beta)+' ] mod( '+str(n)+' ) ')
+
 
