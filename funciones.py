@@ -24,6 +24,6 @@ mcd,x,y=aee(alfa,n)
 
 print('\nFunción de cifrado\nc='+str(alfa)+'p + '+str(beta)+' mod('+str(n)+')')
 
-print('\nFunción de decifrado\np='+str(x)+' [c+'+str(n-beta)+'] mod('+str(244)+')')
+print('\nFunción de decifrado\np='+str(x)+' [c+'+str(n-beta)+'] mod('+str(n)+')')
 
 
