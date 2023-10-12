@@ -3,6 +3,7 @@ import os
 from tkinter import Entry, StringVar
 from tkinter import filedialog
 from cryptography.fernet import Fernet
+import funciones as f
 
 #Funcion que se ejecutara al presionar el boton "Siguiente"
 def funcion_siguiente(): 
@@ -12,10 +13,8 @@ def funcion_siguiente():
     print(valor_n)
     print(valor_alpha)
     print(valor_beta)
-    aee(valor_n, valor_n, valor_alpha)
+    f.aee(valor_n, valor_n, valor_alpha)
     
-def aee(n,alpha,beta):
-    print("Hola")
     
 # Crear la ventana
 ventana = tk.Tk()
